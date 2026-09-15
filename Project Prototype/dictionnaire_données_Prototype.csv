@@ -12,7 +12,7 @@ offre,id_offre,Identifiant unique de l'offre d'emploi,INT,oui,non
 offre,titre,Titre du poste proposé,VARCHAR,oui,non
 offre,description,Description complète de l'offre,TEXT,oui,non
 offre,salaire,Salaire proposé pour le poste,DECIMAL,non,non
-offre,type_contrat,Type de contrat proposé,ENUM,oui,non
+offre,type_contrat,"Type de contrat proposé(CDI,Anapec,CDD)",ENUM,oui,non
 offre,localisation,Lieu de travail,VARCHAR,oui,non
 offre,date_creation,Date de création de l'offre,DATETIME,oui,non
 offre,date_publication,Date de publication de l'offre,DATETIME,non,non
