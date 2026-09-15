@@ -1,0 +1,25 @@
+interface,Name,signification,Type,Obligatoire,calcule
+candidat,id_candidat,Identifiant unique du candidat,INT,oui,non
+candidat,nom,Nom du candidat,VARCHAR,oui,non
+candidat,prenom,Prénom du candidat,VARCHAR,oui,non
+candidat,email,Adresse email du candidat,VARCHAR,oui,non
+candidat,mot_de_passe,Mot de passe du candidat,VARCHAR,oui,non
+candidat,telephone,Numéro de téléphone du candidat,VARCHAR,non,non
+candidat,cv,Curriculum Vitae du candidat,VARCHAR,oui,non
+candidat,photo_profil,Photo de profil du candidat,VARCHAR,non,non
+candidat,date_inscription,Date d'inscription du candidat,DATETIME,oui,non
+offre,id_offre,Identifiant unique de l'offre d'emploi,INT,oui,non
+offre,titre,Titre du poste proposé,VARCHAR,oui,non
+offre,description,Description complète de l'offre,TEXT,oui,non
+offre,salaire,Salaire proposé pour le poste,DECIMAL,non,non
+offre,type_contrat,Type de contrat proposé,ENUM,oui,non
+offre,localisation,Lieu de travail,VARCHAR,oui,non
+offre,date_creation,Date de création de l'offre,DATETIME,oui,non
+offre,date_publication,Date de publication de l'offre,DATETIME,non,non
+offre,date_expiration,Date d'expiration de l'offre,DATETIME,non,non
+offre,statut_offre,"État de l'offre (Brouillon ,Publiée ou Fermée)",ENUM,oui,non
+X,nombre_candidatures,Nombre total de candidatures reçues,INT,X,oui
+secteur,id_secteur,Identifiant unique du secteur,INT,oui,non
+secteur,nom_secteur,Nom du secteur d'activité,VARCHAR,oui,non
+secteur,description,Description du secteur d'activité,TEXT,non,non
+secteur,icone,Icône associée au secteur,VARCHAR,non,non
