@@ -18,7 +18,7 @@ marp: true
 
 # Table Client : 
  * Client  (
-    id_client
+    id_client,
     email_client, 
     nom_client
  )
