@@ -1,33 +1,30 @@
----
-config:
-  theme: neutral
----
-erDiagram
-	direction TB
-	CLIENT {
-		int id_client PK ""  
-		string nom_client  ""  
-		string email_client  ""  
-	}
+flowchart LR
 
-	COMMANDE {
-		int numero_commande PK ""  
-		date date_commande  ""  
-		int id_client FK ""  
-	}
+    CLIENT["CLIENT
+    ─────────────
+    id_client
+    nom_client
+    email_client"]
 
-	PRODUIT {
-		int id_produit PK ""  
-		string nom_produit  ""  
-		decimal prix_produit  ""  
-	}
+    COMMANDE["COMMANDE
+    ─────────────
+    numero_commande
+    date_commande"]
 
-	COMMANDE_PRODUIT {
-		int numero_commande PK,FK ""  
-		int id_produit PK,FK ""  
-		int quantite_commande  ""  
-	}
+    PRODUIT["PRODUIT
+    ─────────────
+    id_produit
+    nom_produit
+    prix_produit"]
 
-	CLIENT||--o{COMMANDE:"passe"
-	COMMANDE||--o{COMMANDE_PRODUIT:"contient"
-	PRODUIT||--o{COMMANDE_PRODUIT:"concerne"
+    R1{"PASSE"}
+
+    R2{"CONTIENT
+    ─────────
+    quantite_commande"}
+
+    CLIENT ---|"1,N"| R1
+    R1 ---|"1,1"| COMMANDE
+
+    COMMANDE ---|"0,N"| R2
+    R2 ---|"0,N"| PRODUIT
