@@ -3,7 +3,7 @@
 $hostname = "localhost";
 $dbname = "FindJob_db";
 $username = "root";
-$password = "1855";
+$password = "";
 
 
 
