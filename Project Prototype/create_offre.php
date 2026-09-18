@@ -1,5 +1,5 @@
 <?php
-require_once "db.php";
+require_once __DIR__ . '/db.php';
 $message = '';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -35,10 +35,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }
 
 }
-
-
-
-
 
 ?>
 

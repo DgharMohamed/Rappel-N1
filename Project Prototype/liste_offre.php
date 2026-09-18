@@ -1,6 +1,6 @@
 <?php
 
-require_once 'db.php';
+require_once __DIR__ . '/db.php';
 
 $stmt = $pdo->query("SELECT * FROM offres ORDER BY date_creation DESC");
 $rows = $stmt->fetchAll();
@@ -18,7 +18,7 @@ $rows = $stmt->fetchAll();
 <body>
     <h1>ALL Offres : </h1>
     <a href="create_offre.php">Créer une nouveau offres</a>
-    <div>
+    <div class="container">
         <?php foreach($rows as $r): ?>
         <div class="offre">
         <h2><?=htmlspecialchars($r['titre'])?></h2>
@@ -28,7 +28,7 @@ $rows = $stmt->fetchAll();
             <?php if($r['salaire']):  ?>
             <span><?=htmlspecialchars($r['salaire'])?> DH</span>
             <?php endif; ?>
-            <span> | Date de l'expiration de cette offre :  <?= htmlspecialchars($r['date_expiration']) ?></span>
+            <span> Date de l'expiration de cette offre :  <?= htmlspecialchars($r['date_expiration']) ?></span>
         </div>
         </div>
         <?php endforeach; ?>

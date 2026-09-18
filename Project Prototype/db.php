@@ -1,17 +1,16 @@
 <?php 
  
 $hostname = "localhost";
-$dbname = "FindJob_db";
+$dbname = "findjob_db";
 $username = "root";
-$password = "";
-
+$password = "1855";
 
 
 try{
     $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e){
-    "ERROR : ". $e->getMessage();
+    die("ERROR : " . $e->getMessage());
 }
 
 
