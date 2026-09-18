@@ -2,7 +2,7 @@
 $hostname = "localhost";
 $dbname = "findjob_db";
 $username = "root";
-$password = "1855";
+$password = "";
 
 try{
     $pdo = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
