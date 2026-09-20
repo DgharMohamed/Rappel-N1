@@ -3,7 +3,7 @@
 $host = "localhost";
 $dbname = "FindJob_db";
 $username = "root";
-$password = getenv('FINDJOB_DB_PASSWORD') ?: '';
+$password = "";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
