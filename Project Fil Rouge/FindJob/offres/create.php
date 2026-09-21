@@ -15,13 +15,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $localisation = trim($_POST['localisation'] ?? '');
     $date_publication = $_POST['date_publication'] !== '' ? $_POST['date_publication'] : null;
     $date_expiration = $_POST['date_expiration'] !== '' ? $_POST['date_expiration'] : null;
-    $statut_offre = $_POST['statut_offre'] ?? 'Publiee';
+    $statut_offre = $_POST['statut_offre'] ?? 'Publiée';
 
     if ($titre === '') $errors[] = 'Le titre est obligatoire.';
     if ($description === '') $errors[] = 'La description est obligatoire.';
     if (!in_array($type_contrat, ['CDI', 'Anapec', 'CDD'])) $errors[] = 'Type de contrat invalide.';
     if ($localisation === '') $errors[] = 'La localisation est obligatoire.';
-    if (!in_array($statut_offre, ['Brouillon', 'Publiee', 'Fermee'])) $errors[] = 'Statut invalide.';
+    if (!in_array($statut_offre, ['Brouillon', 'Publiée', 'Fermée'])) $errors[] = 'Statut invalide.';
 
     if (empty($errors)) {
         $stmt = $pdo->prepare("
@@ -110,9 +110,9 @@ require_once __DIR__ . '/../includes/sidebar.php';
                 <div class="form-group">
                     <label for="statut_offre">Statut</label>
                     <select id="statut_offre" name="statut_offre">
-                        <option value="Publiee" <?php echo ($statut_offre ?? 'Publiee') === 'Publiee' ? 'selected' : ''; ?>>Publiee</option>
+                        <option value="Publiée" <?php echo ($statut_offre ?? 'Publiée') === 'Publiée' ? 'selected' : ''; ?>>Publiée</option>
                         <option value="Brouillon" <?php echo ($statut_offre ?? '') === 'Brouillon' ? 'selected' : ''; ?>>Brouillon</option>
-                        <option value="Fermee" <?php echo ($statut_offre ?? '') === 'Fermee' ? 'selected' : ''; ?>>Fermee</option>
+                        <option value="Fermée" <?php echo ($statut_offre ?? '') === 'Fermée' ? 'selected' : ''; ?>>Fermée</option>
                     </select>
                 </div>
 
