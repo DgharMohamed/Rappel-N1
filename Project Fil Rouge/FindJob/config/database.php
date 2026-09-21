@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$dbname = "FindJob_db";
+$dbname = "Find_Job_db";
 $username = "root";
-$password = "";
+$password = "1855";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
