@@ -1,0 +1,24 @@
+erDiagram
+    UTILISATEUR ||--o{ OFFRE : publie
+
+    UTILISATEUR {
+        identifiant identifiant_utilisateur
+        texte nom
+        texte prenom
+        texte email
+        texte role
+        date date_creation
+    }
+
+    OFFRE {
+        identifiant identifiant_offre
+        texte titre
+        texte description
+        nombre salaire
+        texte type_contrat
+        texte localisation
+        date date_creation
+        date date_publication
+        date date_expiration
+        texte statut_offre
+    }
