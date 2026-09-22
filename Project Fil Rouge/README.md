@@ -1,8 +1,5 @@
 # Prompt used to generate this project (FindJob)
 
-Copy the prompt below and give it to an AI to recreate the same project:
-
----
 
 Create a complete web application called **FindJob** for managing job offers, using plain PHP (no framework) with MySQL via PDO, with a French-language user interface. Requirements:
 
